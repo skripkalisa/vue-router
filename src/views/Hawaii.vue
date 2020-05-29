@@ -1,12 +1,12 @@
-<template lang="pug">
-  .about
-    h1 This is an about page
+<template lang="pug"> 
+  div
+    h2 Hawaii
 </template>
-
 <script>
 export default {
-  name: 'About'
+  data() {
+    return {}
+  }
 }
 </script>
-
 <style lang="stylus" scoped></style>
