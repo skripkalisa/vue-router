@@ -9,8 +9,12 @@ section.destination
 import store from '@/assets/store.js'
 export default {
   data() {
-    return {
-      slug: this.$route.params.slug
+    return {}
+  },
+  props: {
+    slug: {
+      type: String,
+      required: true
     }
   },
   computed: {
