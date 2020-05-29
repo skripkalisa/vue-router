@@ -5,7 +5,7 @@
       li.links
         router-link(to="/") Home
       li.links(v-for="destination in destinations" :key="destination.name")
-        router-link(:to="{name: 'DestinationDetails',params: {id:destination.id}}")
+        router-link(:to="{name: 'DestinationDetails',params: {slug:destination.slug}}")
           | {{destination.name}}
 
 </template>
@@ -14,7 +14,6 @@ import store from '@/assets/store'
 export default {
   data() {
     return {
-      destinationId: this.$route.params.id,
       destinations: store.destinations
     }
   }
