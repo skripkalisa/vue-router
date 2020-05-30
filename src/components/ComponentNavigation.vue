@@ -5,9 +5,10 @@
       li.links
         router-link(to="/") Home
       li.links(v-for="destination in destinations" :key="destination.name")
-        router-link(:to="{name: 'DestinationDetails',params: {slug:destination.slug}}")
+        router-link(:to="{name: 'DetailsDestination',params: {slug:destination.slug}}")
           | {{destination.name}}
-
+      li.links()
+        router-link(to="/user") Dashboard
 </template>
 <script>
 import store from '@/assets/store'
@@ -23,6 +24,12 @@ export default {
 #nav
 
   display flex
+  align-items center
+  position sticky
+  top 0
+  background-color #fff
+  border-bottom 1px solid grey
+  z-index 1
 
 #nav a
   font-weight bold
